@@ -106,7 +106,7 @@ Pi:
 
 **Your version:** "I still wondering if this can works?"
 
-**Native / Idiomatic version:** "I'm still wondering if this can work?"
+**Native:** "I'm still wondering if this can work?"
 
 **Tips:**
 - "I still wondering" → "I'm still wondering" (need "am")

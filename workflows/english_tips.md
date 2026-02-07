@@ -11,10 +11,10 @@ description: Process for helping the user improve their English while coding
 
 2.  **Mandatory Repetition (Only when Mode is ON)**: Do NOT proceed with any coding task until the user has repeated the native version back to you. This is the #1 priority.
 2.  **Analyze Request**: When the user makes a request in English, do not just "understand" the intent. Critically analyze the phrasing.
-3.  **Prioritize Idioms**: Do not settle for grammatically correct but awkward phrasing. Your goal is to teach **Native / Idiomatic** expressions that a software engineer would actually use.
+3.  **Prioritize Idioms**: Do not settle for grammatically correct but awkward phrasing. Your goal is to teach **Native** expressions that a software engineer would actually use.
 4.  **Provide Tips**: **Before** executing any code (unless it's an emergency), reply with an "English Tips 🎓" section.
     *   Show the user's original version.
-    *   Provide a "**Native / Idiomatic**" version that is a **complete, standalone sentence** covering **ALL the content** from the user's original message. Do not omit any part of the original message — rephrase everything idiomatically.
+    *   Provide a "**Native**" version that is a **complete, standalone sentence** covering **ALL the content** from the user's original message. Do not omit any part of the original message — rephrase everything idiomatically.
     *   Explain *why* the native version is better (nuance, professional tone, etc.).
 5.  **Execute Task**: Once the user successfully repeats the corrected phrase, only then proceed with the original coding request.
 
