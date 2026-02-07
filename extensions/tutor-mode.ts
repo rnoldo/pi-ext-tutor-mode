@@ -32,22 +32,7 @@ export default function englishWorkflow(pi: ExtensionAPI) {
     },
   });
   
-  // Keep backward compatibility with old commands
-  pi.registerCommand("english-on", {
-    description: "Enable English learning workflow (deprecated: use 'tutor-mode on')",
-    handler: async (args, ctx) => {
-      englishModeEnabled = true;
-      ctx.ui.notify("✅ Tutor Mode ON - I'll help improve your English! 🎓", "success");
-    },
-  });
-  
-  pi.registerCommand("english-off", {
-    description: "Disable English learning workflow (deprecated: use 'tutor-mode off')",
-    handler: async (args, ctx) => {
-      englishModeEnabled = false;
-      ctx.ui.notify("Tutor Mode OFF - Focusing on coding only", "info");
-    },
-  });
+
   
   // Inject workflow into system prompt when enabled
   pi.on("before_agent_start", async (event, ctx) => {
