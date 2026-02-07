@@ -35,6 +35,19 @@ description: Process for helping the user improve their English while coding
     *   Present a quick **review session** with all words/phrases learned yesterday.
     *   Ask the user to use each word in a sentence to reinforce learning.
 
+8.  **Interactive Review Command**: When the user types **"tutor mode review"** (only available when Tutor Mode is ON):
+    *   Load **today's** vocabulary file (`docs/vocabulary/YYYY-MM-DD.md`).
+    *   Conduct an **interactive quiz** - present scenarios one by one, not all at once.
+    *   For each vocabulary item:
+        1. Create a realistic coding scenario where the word/phrase would be used
+        2. Ask the user to respond using that specific word/phrase
+        3. Wait for their answer
+        4. Provide feedback (correct/encourage improvement)
+        5. Move to the next item only after they answer
+    *   Keep track of progress (e.g., "Question 3/10")
+    *   At the end, provide a summary and celebrate their effort
+    *   **Important**: Go through items **one by one** so users don't feel overwhelmed
+
 ---
 
 ## Example Interaction

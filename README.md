@@ -47,6 +47,7 @@ After installation, you need to set up the workflow file:
 - **`tutor-mode on`** - Enable English learning mode
 - **`tutor-mode off`** - Disable (focus on coding only)
 - **`tutor-mode status`** - Check current status
+- **`tutor mode review`** - Start interactive vocabulary quiz (only when mode is ON)
 
 ### Backward Compatibility
 
