@@ -7,23 +7,23 @@ An English learning workflow extension for the [Pi coding agent](https://github.
 - **Real-time English corrections** - Get instant feedback on your grammar, word choice, and phrasing
 - **Native alternatives** - See how native speakers would phrase your sentences
 - **Vocabulary tracking** - Automatically saves new words and phrases to daily vocabulary files
-- **Review system** - Built-in daily vocabulary review
+- **Review system** - Built-in daily vocabulary review + one-by-one interactive quiz (`tutor mode review`)
 - **Toggle on/off** - Switch between learning mode and fast coding mode
 
 ## Installation
 
 ### Quick Try (No Installation)
 ```bash
-pi -e https://raw.githubusercontent.com/yourusername/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
+pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
 ```
 
 ### Install Permanently
 ```bash
 # Global install (available in all projects)
-pi install https://github.com/yourusername/pi-ext-tutor-mode
+pi install https://github.com/rnoldo/pi-ext-tutor-mode
 
 # Project install (team-shared)
-pi install -l https://github.com/yourusername/pi-ext-tutor-mode
+pi install -l https://github.com/rnoldo/pi-ext-tutor-mode
 ```
 
 ## Setup
@@ -37,7 +37,7 @@ After installation, you need to set up the workflow file:
 
 2. Copy the workflow file:
    ```bash
-   cp ~/.pi/agent/git/github.com/yourusername/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
+   cp ~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
    ```
 
 ## Usage
@@ -47,13 +47,12 @@ After installation, you need to set up the workflow file:
 - **`tutor-mode on`** - Enable English learning mode
 - **`tutor-mode off`** - Disable (focus on coding only)
 - **`tutor-mode status`** - Check current status
-- **`tutor mode review`** - Start interactive vocabulary quiz (only when mode is ON)
+- **`tutor mode review`** - Chat trigger phrase to start interactive vocabulary quiz (only when mode is ON)
 
-### Backward Compatibility
+### Command Notes
 
-Legacy commands (deprecated but still functional):
-- `english-on` → Same as `tutor-mode on`
-- `english-off` → Same as `tutor-mode off`
+- Only `tutor-mode on|off|status` is supported now.
+- Legacy `english-on` / `english-off` aliases were removed.
 
 ### How It Works
 
@@ -134,6 +133,23 @@ Vocabulary files are saved to:
 ```
 docs/vocabulary/YYYY-MM-DD.md
 ```
+
+## Troubleshooting
+
+### `tutor-mode` command conflict
+If you see a conflict like:
+```
+Command "/tutor-mode" conflicts with ...
+```
+it usually means the extension is loaded twice (for example both as a package and as a local file in `~/.pi/agent/extensions/`).
+
+Fix:
+1. Keep only one source of truth (recommended: installed package)
+2. Remove duplicate local file if present:
+   ```bash
+   rm ~/.pi/agent/extensions/tutor-mode.ts
+   ```
+3. Restart Pi
 
 ## Contributing
 
