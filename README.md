@@ -14,16 +14,16 @@ An English learning workflow extension for the [Pi coding agent](https://github.
 
 ### Quick Try (No Installation)
 ```bash
-pi -e https://raw.githubusercontent.com/yourusername/tutor-mode/main/extensions/tutor-mode.ts
+pi -e https://raw.githubusercontent.com/yourusername/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
 ```
 
 ### Install Permanently
 ```bash
 # Global install (available in all projects)
-pi install https://github.com/yourusername/tutor-mode
+pi install https://github.com/yourusername/pi-ext-tutor-mode
 
 # Project install (team-shared)
-pi install -l https://github.com/yourusername/tutor-mode
+pi install -l https://github.com/yourusername/pi-ext-tutor-mode
 ```
 
 ## Setup
@@ -37,7 +37,7 @@ After installation, you need to set up the workflow file:
 
 2. Copy the workflow file:
    ```bash
-   cp ~/.pi/agent/git/github.com/yourusername/tutor-mode/workflows/english_tips.md ~/.agent/workflows/
+   cp ~/.pi/agent/git/github.com/yourusername/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
    ```
 
 ## Usage
@@ -79,7 +79,7 @@ Pi will load yesterday's vocabulary for review!
 ## File Structure
 
 ```
-tutor-mode/
+pi-ext-tutor-mode/
 ├── extensions/
 │   └── tutor-mode.ts         # Main extension
 ├── workflows/
