@@ -12,17 +12,16 @@
 ```bash
 cd ~/pi-ext-tutor-mode
 
-# Replace 'yourusername' with your GitHub username
-git remote add origin https://github.com/yourusername/pi-ext-tutor-mode.git
+git remote add origin https://github.com/rnoldo/pi-ext-tutor-mode.git
 git branch -M main
 git push -u origin main
 ```
 
 ## 3. Update README
 
-After pushing, update the URLs in `README.md`:
-- Replace `yourusername` with your actual GitHub username
-- Update the repository URL in `package.json`
+After pushing, verify the URLs in `README.md` and `package.json` point to:
+- `https://github.com/rnoldo/pi-ext-tutor-mode`
+- `https://raw.githubusercontent.com/rnoldo/pi-ext-tutor-mode/main/...`
 
 ## 4. Test Installation
 
@@ -30,10 +29,10 @@ Anyone can now install it with:
 
 ```bash
 # Quick try
-pi -e https://raw.githubusercontent.com/yourusername/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
+pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
 
 # Permanent install
-pi install https://github.com/yourusername/pi-ext-tutor-mode
+pi install https://github.com/rnoldo/pi-ext-tutor-mode
 ```
 
 ## 5. Post-Install Setup
@@ -42,7 +41,7 @@ Users need to copy the workflow file:
 
 ```bash
 mkdir -p ~/.agent/workflows
-cp ~/.pi/agent/git/github.com/yourusername/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
+cp ~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
 ```
 
 ## Optional: Auto-setup Script
@@ -50,8 +49,8 @@ cp ~/.pi/agent/git/github.com/yourusername/pi-ext-tutor-mode/workflows/english_t
 Consider adding a setup script for easier installation. Users would run:
 
 ```bash
-pi install https://github.com/yourusername/pi-ext-tutor-mode
-~/.pi/agent/git/github.com/yourusername/pi-ext-tutor-mode/setup.sh
+pi install https://github.com/rnoldo/pi-ext-tutor-mode
+~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/setup.sh
 ```
 
 ---
