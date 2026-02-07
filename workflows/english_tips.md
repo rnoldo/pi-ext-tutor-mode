@@ -5,9 +5,9 @@ description: Process for helping the user improve their English while coding
 ## Core Rules
 
 1.  **Toggle Feature**:
-    *   If the user says **"English Mode On"**: Enable strict English correction (rules below).
-    *   If the user says **"English Mode Off"**: Disable strict correction and focus purely on speed and coding.
-    *   **Default State**: English Mode is **ON**.
+    *   If the user says **"Tutor Mode On"**: Enable strict English correction (rules below).
+    *   If the user says **"Tutor Mode Off"**: Disable strict correction and focus purely on speed and coding.
+    *   **Default State**: Tutor Mode is **ON**.
 
 2.  **Mandatory Repetition (Only when Mode is ON)**: Do NOT proceed with any coding task until the user has repeated the native version back to you. This is the #1 priority.
 2.  **Analyze Request**: When the user makes a request in English, do not just "understand" the intent. Critically analyze the phrasing.
@@ -30,7 +30,7 @@ description: Process for helping the user improve their English while coding
         *   **Example**: A sample sentence using the word/phrase
     *   Append to the existing file for that day, or create a new file if it doesn't exist.
 
-7.  **Daily Review Trigger**: When the user says **"又是新的一天"** (or similar like "new day", "good morning"):
+7.  **Daily Review Trigger**: When the user says **"It's a new day"** or **"Start a new day"**:
     *   Look up **yesterday's** vocabulary file (`docs/vocabulary/YYYY-MM-DD.md` for the previous date).
     *   Present a quick **review session** with all words/phrases learned yesterday.
     *   Ask the user to use each word in a sentence to reinforce learning.

@@ -50,7 +50,7 @@ After installation, you need to set up the workflow file:
 
 ### Backward Compatibility
 
-The old commands still work:
+Legacy commands (deprecated but still functional):
 - `english-on` → Same as `tutor-mode on`
 - `english-off` → Same as `tutor-mode off`
 
@@ -71,7 +71,11 @@ When tutor mode is **OFF** 🚀:
 
 Start each session with:
 ```
-又是新的一天
+It's a new day
+```
+or
+```
+Start a new day
 ```
 
 Pi will load yesterday's vocabulary for review!

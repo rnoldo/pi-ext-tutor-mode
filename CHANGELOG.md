@@ -2,6 +2,17 @@
 
 All notable changes to the Tutor Mode extension will be documented in this file.
 
+## [1.1.0] - 2026-02-07
+
+### Changed
+- **Breaking**: Changed command terminology from "English Mode" to "Tutor Mode" for consistency
+- **Breaking**: Daily review trigger changed from Chinese "又是新的一天" to English "It's a new day" or "Start a new day"
+- Updated all documentation to reflect new command naming
+- Improved internationalization by using English-only triggers
+
+### Backward Compatibility
+- Legacy commands (`english-on/off`) still work but are deprecated
+
 ## [1.0.0] - 2026-02-06
 
 ### Added
