@@ -37,20 +37,12 @@ pi install https://github.com/rnoldo/pi-ext-tutor-mode
 
 ## 5. Post-Install Setup
 
-Users need to copy the workflow file:
+No extra setup is required.
 
-```bash
-mkdir -p ~/.agent/workflows
-cp ~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
-```
+The extension reads its workflow directly from:
 
-## Optional: Auto-setup Script
-
-Consider adding a setup script for easier installation. Users would run:
-
-```bash
-pi install https://github.com/rnoldo/pi-ext-tutor-mode
-~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/setup.sh
+```text
+workflows/english_tips.md
 ```
 
 ---

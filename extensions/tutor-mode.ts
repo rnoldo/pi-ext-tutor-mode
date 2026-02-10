@@ -1,18 +1,23 @@
 import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
-import { readFileSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import { join } from "path";
-import { homedir } from "os";
 
 export default function englishWorkflow(pi: ExtensionAPI) {
   let englishModeEnabled = false; // Default: OFF (user controls it)
   let workflowContent = "";
   
-  // Load workflow content at startup
-  try {
-    const workflowPath = join(homedir(), ".agent/workflows/english_tips.md");
-    workflowContent = readFileSync(workflowPath, "utf-8");
-  } catch (error) {
-    console.error("Failed to load English workflow:", error);
+  // Load workflow content at startup from extension/package path
+  const workflowPath = join(__dirname, "..", "workflows", "english_tips.md");
+
+  if (!existsSync(workflowPath)) {
+    console.error(`[tutor-mode] Workflow file not found: ${workflowPath}`);
+  } else {
+    try {
+      workflowContent = readFileSync(workflowPath, "utf-8");
+      console.log(`[tutor-mode] Loaded workflow: ${workflowPath}`);
+    } catch (error) {
+      console.error(`[tutor-mode] Failed to load workflow at ${workflowPath}:`, error);
+    }
   }
   
   // Register command to enable tutor mode

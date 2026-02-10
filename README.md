@@ -28,17 +28,13 @@ pi install -l https://github.com/rnoldo/pi-ext-tutor-mode
 
 ## Setup
 
-After installation, you need to set up the workflow file:
+No manual setup is required after installation.
 
-1. Create the workflows directory:
-   ```bash
-   mkdir -p ~/.agent/workflows
-   ```
+The extension loads its workflow from the package itself:
 
-2. Copy the workflow file:
-   ```bash
-   cp ~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
-   ```
+```text
+workflows/english_tips.md
+```
 
 ## Usage
 
@@ -124,13 +120,13 @@ Pi: Perfect! 🎉
 
 ## Configuration
 
-The extension looks for the workflow file at:
-```
-~/.agent/workflows/english_tips.md
+Workflow source:
+```text
+workflows/english_tips.md
 ```
 
 Vocabulary files are saved to:
-```
+```text
 docs/vocabulary/YYYY-MM-DD.md
 ```
 

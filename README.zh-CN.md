@@ -30,18 +30,12 @@ pi install -l https://github.com/rnoldo/pi-ext-tutor-mode
 
 ## 初始化配置
 
-安装后需要准备 workflow 文件：
+安装后无需手动复制 workflow 文件。
 
-1. 创建目录：
+扩展会直接从包内读取：
 
-```bash
-mkdir -p ~/.agent/workflows
-```
-
-2. 复制 workflow 文件：
-
-```bash
-cp ~/.pi/agent/git/github.com/rnoldo/pi-ext-tutor-mode/workflows/english_tips.md ~/.agent/workflows/
+```text
+workflows/english_tips.md
 ```
 
 ## 使用方式
@@ -104,10 +98,10 @@ pi-ext-tutor-mode/
 
 ## 配置位置
 
-workflow 文件读取路径：
+workflow 文件来源：
 
 ```text
-~/.agent/workflows/english_tips.md
+workflows/english_tips.md
 ```
 
 词汇文件保存路径：
