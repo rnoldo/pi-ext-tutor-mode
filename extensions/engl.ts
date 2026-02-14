@@ -10,18 +10,18 @@ export default function englishWorkflow(pi: ExtensionAPI) {
   const workflowPath = join(__dirname, "..", "workflows", "english_tips.md");
 
   if (!existsSync(workflowPath)) {
-    console.error(`[eng] Workflow file not found: ${workflowPath}`);
+    console.error(`[engl] Workflow file not found: ${workflowPath}`);
   } else {
     try {
       workflowContent = readFileSync(workflowPath, "utf-8");
-      console.log(`[eng] Loaded workflow: ${workflowPath}`);
+      console.log(`[engl] Loaded workflow: ${workflowPath}`);
     } catch (error) {
-      console.error(`[eng] Failed to load workflow at ${workflowPath}:`, error);
+      console.error(`[engl] Failed to load workflow at ${workflowPath}:`, error);
     }
   }
   
   // Register command to enable english mode
-  pi.registerCommand("eng", {
+  pi.registerCommand("engl", {
     description: "Enable English learning workflow",
     handler: async (args, ctx) => {
       if (args.length === 0 || args[0] === "on") {

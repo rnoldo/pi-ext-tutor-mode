@@ -35,7 +35,7 @@ description: Process for helping the user improve their English while coding
     *   Present a quick **review session** with all words/phrases learned yesterday.
     *   Ask the user to use each word in a sentence to reinforce learning.
 
-8.  **Interactive Review Command**: When the user types **"eng review"** (only available when English Mode is ON):
+8.  **Interactive Review Command**: When the user types **"engl review"** (only available when English Mode is ON):
     *   Load **today's** vocabulary file (`docs/vocabulary/YYYY-MM-DD.md`).
     *   Conduct an **interactive quiz** - present scenarios one by one, not all at once.
     *   For each vocabulary item:

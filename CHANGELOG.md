@@ -5,9 +5,9 @@ All notable changes to the English Mode extension will be documented in this fil
 ## [2.0.0] - 2026-02-14
 
 ### Changed
-- **Breaking**: Renamed plugin from "Tutor Mode" to "English Mode" (`pi-ext-eng`)
-- **Breaking**: Changed command from `tutor-mode` to `eng`
-- **Breaking**: Changed command `tutor mode review` to `eng review`
+- **Breaking**: Renamed plugin from "Tutor Mode" to "English Mode" (`pi-ext-engl`)
+- **Breaking**: Changed command from `tutor-mode` to `engl`
+- **Breaking**: Changed command `tutor mode review` to `engl review`
 - Updated all documentation and examples to use new terminology
 
 ## [1.1.0] - 2026-02-07

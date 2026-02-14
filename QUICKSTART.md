@@ -3,16 +3,16 @@
 ## 1. Create GitHub Repository
 
 1. Go to https://github.com/new
-2. Create a new repository named `pi-ext-eng` (recommended)
+2. Create a new repository named `pi-ext-engl` (recommended)
 3. **Don't** initialize with README (we already have one)
 4. Copy the repository URL
 
 ## 2. Push to GitHub
 
 ```bash
-cd ~/pi-ext-eng
+cd ~/pi-ext-engl
 
-git remote add origin https://github.com/rnoldo/pi-ext-eng.git
+git remote add origin https://github.com/rnoldo/pi-ext-engl.git
 git branch -M main
 git push -u origin main
 ```
@@ -20,8 +20,8 @@ git push -u origin main
 ## 3. Update README
 
 After pushing, verify the URLs in `README.md` and `package.json` point to:
-- `https://github.com/rnoldo/pi-ext-eng`
-- `https://raw.githubusercontent.com/rnoldo/pi-ext-eng/main/...`
+- `https://github.com/rnoldo/pi-ext-engl`
+- `https://raw.githubusercontent.com/rnoldo/pi-ext-engl/main/...`
 
 ## 4. Test Installation
 
@@ -29,10 +29,10 @@ Anyone can now install it with:
 
 ```bash
 # Quick try
-pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-eng/main/extensions/eng.ts
+pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-engl/main/extensions/engl.ts
 
 # Permanent install
-pi install https://github.com/rnoldo/pi-ext-eng
+pi install https://github.com/rnoldo/pi-ext-engl
 ```
 
 ## 5. Post-Install Setup
@@ -50,9 +50,9 @@ workflows/english_tips.md
 ## What's in the Package
 
 ```
-pi-ext-eng/
+pi-ext-engl/
 ├── extensions/
-│   └── eng.ts                 # Main extension file
+│   └── engl.ts                # Main extension file
 ├── workflows/
 │   └── english_tips.md        # Workflow instructions for the LLM
 ├── vocabulary/
@@ -68,7 +68,7 @@ pi-ext-eng/
 
 1. **Test it locally** first:
    ```bash
-   pi -e ~/pi-ext-eng/extensions/eng.ts
+   pi -e ~/pi-ext-engl/extensions/engl.ts
    ```
 
 2. **Create GitHub repo** and push

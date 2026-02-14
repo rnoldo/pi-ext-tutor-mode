@@ -7,23 +7,23 @@ An English learning workflow extension for the [Pi coding agent](https://github.
 - **Real-time English corrections** - Get instant feedback on your grammar, word choice, and phrasing
 - **Native alternatives** - See how native speakers would phrase your sentences
 - **Vocabulary tracking** - Automatically saves new words and phrases to daily vocabulary files
-- **Review system** - Built-in daily vocabulary review + one-by-one interactive quiz (`eng review`)
+- **Review system** - Built-in daily vocabulary review + one-by-one interactive quiz (`engl review`)
 - **Toggle on/off** - Switch between learning mode and fast coding mode
 
 ## Installation
 
 ### Quick Try (No Installation)
 ```bash
-pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-eng/main/extensions/eng.ts
+pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-engl/main/extensions/engl.ts
 ```
 
 ### Install Permanently
 ```bash
 # Global install (available in all projects)
-pi install https://github.com/rnoldo/pi-ext-eng
+pi install https://github.com/rnoldo/pi-ext-engl
 
 # Project install (team-shared)
-pi install -l https://github.com/rnoldo/pi-ext-eng
+pi install -l https://github.com/rnoldo/pi-ext-engl
 ```
 
 ## Setup
@@ -40,15 +40,15 @@ workflows/english_tips.md
 
 ### Commands
 
-- **`eng on`** - Enable English learning mode
-- **`eng off`** - Disable (focus on coding only)
-- **`eng status`** - Check current status
-- **`eng review`** - Chat trigger phrase to start interactive vocabulary quiz (only when mode is ON)
+- **`engl on`** - Enable English learning mode
+- **`engl off`** - Disable (focus on coding only)
+- **`engl status`** - Check current status
+- **`engl review`** - Chat trigger phrase to start interactive vocabulary quiz (only when mode is ON)
 
 ### Command Notes
 
-- Only `eng on|off|status` is supported now.
-- Legacy `tutor-mode` commands were removed.
+- Only `engl on|off|status` is supported now.
+- Legacy `tutor-mode` and `eng` commands were removed.
 
 ### How It Works
 
@@ -79,9 +79,9 @@ Pi will load yesterday's vocabulary for review!
 ## File Structure
 
 ```
-pi-ext-eng/
+pi-ext-engl/
 ├── extensions/
-│   └── eng.ts         # Main extension
+│   └── engl.ts        # Main extension
 ├── workflows/
 │   └── english_tips.md       # Learning workflow instructions
 ├── vocabulary/               # Example vocabulary structure
@@ -93,7 +93,7 @@ pi-ext-eng/
 ## Example Session
 
 ```
-You: eng on
+You: engl on
 Pi: ✅ English Mode ON - I'll help improve your English! 🎓
 
 You: I still wondering if this can works?
@@ -132,10 +132,10 @@ docs/vocabulary/YYYY-MM-DD.md
 
 ## Troubleshooting
 
-### `eng` command conflict
+### `engl` command conflict
 If you see a conflict like:
 ```
-Command "/eng" conflicts with ...
+Command "/engl" conflicts with ...
 ```
 it usually means the extension is loaded twice (for example both as a package and as a local file in `~/.pi/agent/extensions/`).
 
@@ -143,7 +143,7 @@ Fix:
 1. Keep only one source of truth (recommended: installed package)
 2. Remove duplicate local file if present:
    ```bash
-   rm ~/.pi/agent/extensions/eng.ts
+   rm ~/.pi/agent/extensions/engl.ts
    ```
 3. Restart Pi
 
