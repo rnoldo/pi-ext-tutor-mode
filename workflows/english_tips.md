@@ -5,9 +5,9 @@ description: Process for helping the user improve their English while coding
 ## Core Rules
 
 1.  **Toggle Feature**:
-    *   If the user says **"Tutor Mode On"**: Enable strict English correction (rules below).
-    *   If the user says **"Tutor Mode Off"**: Disable strict correction and focus purely on speed and coding.
-    *   **Default State**: Tutor Mode is **ON**.
+    *   If the user says **"English Mode On"**: Enable strict English correction (rules below).
+    *   If the user says **"English Mode Off"**: Disable strict correction and focus purely on speed and coding.
+    *   **Default State**: English Mode is **ON**.
 
 2.  **Mandatory Repetition (Only when Mode is ON)**: Ask the user to repeat the native version. Wait for their attempt. Do not require perfection - a reasonable attempt or approximation is sufficient. If they try, accept it and move on. This is the #1 priority.
 3.  **Analyze Request**: When the user makes a request in English, do not just "understand" the intent. Critically analyze the phrasing.
@@ -35,7 +35,7 @@ description: Process for helping the user improve their English while coding
     *   Present a quick **review session** with all words/phrases learned yesterday.
     *   Ask the user to use each word in a sentence to reinforce learning.
 
-8.  **Interactive Review Command**: When the user types **"tutor mode review"** (only available when Tutor Mode is ON):
+8.  **Interactive Review Command**: When the user types **"eng review"** (only available when English Mode is ON):
     *   Load **today's** vocabulary file (`docs/vocabulary/YYYY-MM-DD.md`).
     *   Conduct an **interactive quiz** - present scenarios one by one, not all at once.
     *   For each vocabulary item:

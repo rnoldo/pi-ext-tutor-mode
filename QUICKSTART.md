@@ -3,16 +3,16 @@
 ## 1. Create GitHub Repository
 
 1. Go to https://github.com/new
-2. Create a new repository named `pi-ext-tutor-mode`
+2. Create a new repository named `pi-ext-eng` (recommended)
 3. **Don't** initialize with README (we already have one)
 4. Copy the repository URL
 
 ## 2. Push to GitHub
 
 ```bash
-cd ~/pi-ext-tutor-mode
+cd ~/pi-ext-eng
 
-git remote add origin https://github.com/rnoldo/pi-ext-tutor-mode.git
+git remote add origin https://github.com/rnoldo/pi-ext-eng.git
 git branch -M main
 git push -u origin main
 ```
@@ -20,8 +20,8 @@ git push -u origin main
 ## 3. Update README
 
 After pushing, verify the URLs in `README.md` and `package.json` point to:
-- `https://github.com/rnoldo/pi-ext-tutor-mode`
-- `https://raw.githubusercontent.com/rnoldo/pi-ext-tutor-mode/main/...`
+- `https://github.com/rnoldo/pi-ext-eng`
+- `https://raw.githubusercontent.com/rnoldo/pi-ext-eng/main/...`
 
 ## 4. Test Installation
 
@@ -29,10 +29,10 @@ Anyone can now install it with:
 
 ```bash
 # Quick try
-pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
+pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-eng/main/extensions/eng.ts
 
 # Permanent install
-pi install https://github.com/rnoldo/pi-ext-tutor-mode
+pi install https://github.com/rnoldo/pi-ext-eng
 ```
 
 ## 5. Post-Install Setup
@@ -50,9 +50,9 @@ workflows/english_tips.md
 ## What's in the Package
 
 ```
-pi-ext-tutor-mode/
+pi-ext-eng/
 ├── extensions/
-│   └── tutor-mode.ts          # Main extension file
+│   └── eng.ts                 # Main extension file
 ├── workflows/
 │   └── english_tips.md        # Workflow instructions for the LLM
 ├── vocabulary/
@@ -68,7 +68,7 @@ pi-ext-tutor-mode/
 
 1. **Test it locally** first:
    ```bash
-   pi -e ~/pi-ext-tutor-mode/extensions/tutor-mode.ts
+   pi -e ~/pi-ext-eng/extensions/eng.ts
    ```
 
 2. **Create GitHub repo** and push

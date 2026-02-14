@@ -1,4 +1,4 @@
-# 🎓 Tutor Mode for Pi
+# 🎓 English Mode for Pi
 
 An English learning workflow extension for the [Pi coding agent](https://github.com/badlogic/pi). Learn and improve your English while coding!
 
@@ -7,23 +7,23 @@ An English learning workflow extension for the [Pi coding agent](https://github.
 - **Real-time English corrections** - Get instant feedback on your grammar, word choice, and phrasing
 - **Native alternatives** - See how native speakers would phrase your sentences
 - **Vocabulary tracking** - Automatically saves new words and phrases to daily vocabulary files
-- **Review system** - Built-in daily vocabulary review + one-by-one interactive quiz (`tutor mode review`)
+- **Review system** - Built-in daily vocabulary review + one-by-one interactive quiz (`eng review`)
 - **Toggle on/off** - Switch between learning mode and fast coding mode
 
 ## Installation
 
 ### Quick Try (No Installation)
 ```bash
-pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-tutor-mode/main/extensions/tutor-mode.ts
+pi -e https://raw.githubusercontent.com/rnoldo/pi-ext-eng/main/extensions/eng.ts
 ```
 
 ### Install Permanently
 ```bash
 # Global install (available in all projects)
-pi install https://github.com/rnoldo/pi-ext-tutor-mode
+pi install https://github.com/rnoldo/pi-ext-eng
 
 # Project install (team-shared)
-pi install -l https://github.com/rnoldo/pi-ext-tutor-mode
+pi install -l https://github.com/rnoldo/pi-ext-eng
 ```
 
 ## Setup
@@ -40,26 +40,26 @@ workflows/english_tips.md
 
 ### Commands
 
-- **`tutor-mode on`** - Enable English learning mode
-- **`tutor-mode off`** - Disable (focus on coding only)
-- **`tutor-mode status`** - Check current status
-- **`tutor mode review`** - Chat trigger phrase to start interactive vocabulary quiz (only when mode is ON)
+- **`eng on`** - Enable English learning mode
+- **`eng off`** - Disable (focus on coding only)
+- **`eng status`** - Check current status
+- **`eng review`** - Chat trigger phrase to start interactive vocabulary quiz (only when mode is ON)
 
 ### Command Notes
 
-- Only `tutor-mode on|off|status` is supported now.
-- Legacy `english-on` / `english-off` aliases were removed.
+- Only `eng on|off|status` is supported now.
+- Legacy `tutor-mode` commands were removed.
 
 ### How It Works
 
-When tutor mode is **ON** 🎓:
+When English mode is **ON** 🎓:
 
 1. You say something in English
 2. Pi corrects your grammar and suggests native alternatives
 3. New vocabulary is automatically saved to `docs/vocabulary/YYYY-MM-DD.md`
 4. You repeat the corrected version to practice
 
-When tutor mode is **OFF** 🚀:
+When English mode is **OFF** 🚀:
 - No corrections or vocabulary tracking
 - Fast responses focused purely on coding
 
@@ -79,9 +79,9 @@ Pi will load yesterday's vocabulary for review!
 ## File Structure
 
 ```
-pi-ext-tutor-mode/
+pi-ext-eng/
 ├── extensions/
-│   └── tutor-mode.ts         # Main extension
+│   └── eng.ts         # Main extension
 ├── workflows/
 │   └── english_tips.md       # Learning workflow instructions
 ├── vocabulary/               # Example vocabulary structure
@@ -93,8 +93,8 @@ pi-ext-tutor-mode/
 ## Example Session
 
 ```
-You: tutor-mode on
-Pi: ✅ Tutor Mode ON - I'll help improve your English! 🎓
+You: eng on
+Pi: ✅ English Mode ON - I'll help improve your English! 🎓
 
 You: I still wondering if this can works?
 Pi: 
@@ -132,10 +132,10 @@ docs/vocabulary/YYYY-MM-DD.md
 
 ## Troubleshooting
 
-### `tutor-mode` command conflict
+### `eng` command conflict
 If you see a conflict like:
 ```
-Command "/tutor-mode" conflicts with ...
+Command "/eng" conflicts with ...
 ```
 it usually means the extension is loaded twice (for example both as a package and as a local file in `~/.pi/agent/extensions/`).
 
@@ -143,7 +143,7 @@ Fix:
 1. Keep only one source of truth (recommended: installed package)
 2. Remove duplicate local file if present:
    ```bash
-   rm ~/.pi/agent/extensions/tutor-mode.ts
+   rm ~/.pi/agent/extensions/eng.ts
    ```
 3. Restart Pi
 
