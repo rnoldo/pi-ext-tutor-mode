@@ -1,4 +1,5 @@
 import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
+import type { AutocompleteItem } from "@mariozechner/pi-tui";
 import { existsSync, readFileSync } from "fs";
 import { join } from "path";
 
@@ -23,14 +24,21 @@ export default function englishWorkflow(pi: ExtensionAPI) {
   // Register command to enable english mode
   pi.registerCommand("engl", {
     description: "Enable English learning workflow",
+    getArgumentCompletions: (prefix: string): AutocompleteItem[] | null => {
+      const subcommands = ["on", "off", "status"];
+      const items = subcommands.map((cmd) => ({ label: cmd, value: cmd }));
+      const filtered = items.filter((item) => item.value.startsWith(prefix));
+      return filtered.length > 0 ? filtered : null;
+    },
     handler: async (args, ctx) => {
-      if (args.length === 0 || args[0] === "on") {
+      const subcommand = args.trim().split(/\s+/)[0];
+      if (subcommand === "" || subcommand === "on") {
         englishModeEnabled = true;
         ctx.ui.notify("✅ English Mode ON - I'll help improve your English! 🎓", "success");
-      } else if (args[0] === "off") {
+      } else if (subcommand === "off") {
         englishModeEnabled = false;
         ctx.ui.notify("English Mode OFF - Focusing on coding only", "info");
-      } else if (args[0] === "status") {
+      } else if (subcommand === "status") {
         const status = englishModeEnabled ? "ON ✅" : "OFF";
         ctx.ui.notify(`English Mode is currently: ${status}`, "info");
       }
